@@ -27,3 +27,17 @@ Rn-2 O sistema deverá ser acessado pela web.
 Rn-3 O sistema deve possuir portabilidade para mobile.
 
 Rn4: O sistema deve estar disponível 24/7
+
+
+<h3>Link para a documentação do projeto:</h3>
+https://github.com/Borsoni99/proj-Front-End-Codigo.git](https://github.com/Borsoni99/Projeto-front-end/edit/main/README.md)https://github.com/Borsoni99/Projeto-front-end/edit/main/README.md   
+
+
+
+<h3>Integrantes</h3>
+
+Daniel Lloyd <br>
+Henrique Dantas <br>
+Hudson Assumpção <br>
+Thiago Borsoni <br>
+Ricardo Castro
