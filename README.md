@@ -2,7 +2,7 @@
 Este repositório tem como objetivo manter o código do projeto nimbus
 
 <h3>Link para a documentação do projeto:</h3>
-https://github.com/Borsoni99/proj-Front-End-Codigo.git  
+https://github.com/Borsoni99/proj-Front-End.git  
 
 <h2> Requisitos Funcionais:</h2>
 
