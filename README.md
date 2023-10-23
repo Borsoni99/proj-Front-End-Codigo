@@ -30,7 +30,7 @@ Rn4: O sistema deve estar disponível 24/7
 
 
 <h3>Link para a documentação do projeto:</h3>
-https://github.com/Borsoni99/proj-Front-End-Codigo.git](https://github.com/Borsoni99/Projeto-front-end/edit/main/README.md)https://github.com/Borsoni99/Projeto-front-end/edit/main/README.md   
+https://github.com/Borsoni99/proj-Front-End-Codigo.git  
 
 
 
