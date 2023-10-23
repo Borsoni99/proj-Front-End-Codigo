@@ -1,4 +1,8 @@
 <h1> Projeto Nimbus(Código)</h1>
+Este repositório tem como objetivo manter o código do projeto nimbus
+
+<h3>Link para a documentação do projeto:</h3>
+https://github.com/Borsoni99/proj-Front-End-Codigo.git  
 
 <h2> Requisitos Funcionais:</h2>
 
@@ -29,8 +33,6 @@ Rn-3 O sistema deve possuir portabilidade para mobile.
 Rn4: O sistema deve estar disponível 24/7
 
 
-<h3>Link para a documentação do projeto:</h3>
-https://github.com/Borsoni99/proj-Front-End-Codigo.git  
 
 
 
