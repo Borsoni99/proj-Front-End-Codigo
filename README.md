@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+<h1> Projeto Nimbus(Código)</h1>
+Este repositório tem como objetivo manter o código do projeto nimbus
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3>Link para a documentação do projeto:</h3>
+https://github.com/Borsoni99/Projeto-front-end.git
 
-## Available Scripts
+<h2> Requisitos Funcionais:</h2>
 
-In the project directory, you can run:
+RF-1 O sistema deve apresentar dados por meio de tabelas, gráficos e marcadores georreferenciados em um mapa.
 
-### `npm start`
+Rf-2 O sistema deve permitir a exportação dos dados em formatos diferentes. (CSV, PDF e PNG).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Rf-3 O sistema deve permitir a busca de dados específicos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Rf-4 O sistema deve incluir um mapa interativo com marcadores para cada ponto de monitoramento e estação.
 
-### `npm test`
+RF-5 O sistema deve disponibilizar relatorios de uma estação, caso selecionada no mapa.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Rf-6 O sistema deve permitir a interatividade com os gráficos.
 
-### `npm run build`
+Rf-7 O sistema deve possibilitar a escolha das variáveis a serem exibidas simultaneamente.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Rf-8 O sistema deve permitir desenhar um quadrado no mapa possibilitando a seleção de multiplos marcadores.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Requisitos Não Funcionais
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Rn-1 O sistema deve apresentar um novo layout, melhorando a experiência do usuário.
 
-### `npm run eject`
+Rn-2 O sistema deverá ser acessado pela web.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Rn-3 O sistema deve possuir portabilidade para mobile.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Rn4: O sistema deve estar disponível 24/7
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3>Integrantes</h3>
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Daniel Lloyd <br>
+Henrique Dantas <br>
+Hudson Assumpção <br>
+Thiago Borsoni <br>
+Ricardo Castro
