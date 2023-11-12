@@ -1,19 +1,19 @@
-import React, { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 //import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Primeiro from './pages/Primeiro';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Segundo from './pages/Segundo';
-import Listagem from './pages/Listagem/Listagem';
-import MAPA from './pages/Mapa';
+//import reportWebVitals from "./reportWebVitals";
+//import Primeiro from "./pages/Primeiro";
+//import { BrowserRouter, Route, Routes } from "react-router-dom";
+//import Segundo from "./pages/Segundo";
+//import Listagem from "./pages/Listagem/Listagem";
+//import MAPA from "./pages/Mapa";
+import Principal from "./pages/Principal";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
-    <MAPA />
+    <Principal />
   </StrictMode>
   /*
   <React.StrictMode>
@@ -32,4 +32,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//reportWebVitals();
