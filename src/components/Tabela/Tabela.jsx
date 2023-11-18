@@ -1,37 +1,48 @@
-import React from "react";
-import "./style.css"; // Add your CSS file for styling
+import React, { useEffect, useState } from "react";
+import "./style.css";
 import weather from "../../data/weather.json";
 
-const Table = () => {
+const Table = ({ selectedVariables, startDate, endDate }) => {
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    var resultDate = weather.filter(function (entry) {
+      var entryDate = entry["Formatted Date"];
+      return entryDate >= startDate && entryDate <= endDate;
+    });
+
+    const filteredData = resultDate.map((row) => {
+      const filteredRow = {};
+      selectedVariables.forEach((variable) => {
+        filteredRow[variable] = row[variable];
+      });
+      filteredRow["Formatted Date"] = row["Formatted Date"];
+      return filteredRow;
+    });
+
+    setFilteredData(filteredData);
+  }, [selectedVariables, startDate, endDate]);
+
   return (
-    <div className="table-container">
-      {weather.map((row) => (
-        <div key={row.Date} className="table-card">
-          <div className="card-header">
-            <span>Data: {row["Formatted Date"]}</span>
+    <div style={{ padding: "5vw", margin: "15hv" }}>
+      <h1>Tabela</h1>
+      <div className="table-container">
+        {filteredData.map((row, index) => (
+          <div key={index} className="table-card">
+            <h2>Data: {row["Formatted Date"]}</h2>
+            {Object.entries(row).map(
+              ([key, value]) =>
+                key !== "Formatted Date" && (
+                  <div key={key} className="card-body">
+                    <div>{`${key}: ${
+                      typeof value === "number" ? value.toFixed(2) : value
+                    }`}</div>
+                  </div>
+                )
+            )}
           </div>
-          <div className="card-body">
-            <div>Summary: {row.Summary}</div>
-            <div>Precip Type: {row["Precip Type"]}</div>
-            <div>Temperature: {row["Temperature (C)"].toFixed(2)} (C)</div>
-            <div>
-              Apparent Temperature: {row["Apparent Temperature (C)"].toFixed(2)}{" "}
-              (C)
-            </div>
-            <div>Humidity: {row.Humidity}</div>
-            <div>Wind Speed: {row["Wind Speed (km/h)"].toFixed(2)} (km/h)</div>
-            <div>
-              Wind Bearing: {row["Wind Bearing (degrees)"].toFixed(2)} (degrees)
-            </div>
-            <div>Visibility: {row["Visibility (km)"].toFixed(2)} (km)</div>
-            <div>Loud Cover: {row["Loud Cover"]}</div>
-            <div>
-              Pressure: {row["Pressure (millibars)"].toFixed(2)} (millibars)
-            </div>
-            <div>Daily Summary: {row["Daily Summary"]}</div>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

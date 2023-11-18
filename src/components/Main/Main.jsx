@@ -4,11 +4,47 @@ import Grafic from "../Grafico/Grafico";
 import TableComponent from "../Tabela/Tabela";
 import "./style.css";
 
+const variables = [
+  "Summary",
+  "Precip Type",
+  "Temperature (C)",
+  "Apparent Temperature (C)",
+  "Humidity",
+  "Wind Speed (km/h)",
+  "Wind Bearing (degrees)",
+  "Visibility (km)",
+  "Loud Cover",
+  "Pressure (millibars)",
+  "Daily Summary",
+];
+
 const Main = () => {
-  const [selectedFormat, setSelectedFormat] = useState("map"); // Default to 'map'
+  const [selectedFormat, setSelectedFormat] = useState("map");
+  const [selectedVariables, setSelectedVariables] = useState([]);
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   const handleFormatChange = (event) => {
     setSelectedFormat(event.target.value);
+  };
+
+  const handleVariableChange = (event) => {
+    const variable = event.target.value;
+    setSelectedVariables((prevSelected) => {
+      if (prevSelected.includes(variable)) {
+        return prevSelected.filter((v) => v !== variable);
+      } else {
+        return [...prevSelected, variable];
+      }
+    });
+  };
+
+  const handleStartDateChange = (event) => {
+    setStartDate(event.target.value);
+  };
+
+  const handleEndDateChange = (event) => {
+    setEndDate(event.target.value);
   };
 
   const renderFormat = () => {
@@ -16,9 +52,21 @@ const Main = () => {
       case "map":
         return <MAPA />;
       case "graph":
-        return <Grafic />;
+        return (
+          <Grafic
+            selectedVariables={selectedVariables}
+            startDate={startDate}
+            endDate={endDate}
+          />
+        );
       case "table":
-        return <TableComponent />;
+        return (
+          <TableComponent
+            selectedVariables={selectedVariables}
+            startDate={startDate}
+            endDate={endDate}
+          />
+        );
       default:
         return null;
     }
@@ -53,22 +101,37 @@ const Main = () => {
                   <div className="form-group">
                     <div className="input-group date">
                       <label htmlFor="start">Data de Início: </label>
-                      <input type="date" placeholder="Data de Início" />
+                      <input
+                        type="date"
+                        placeholder="Data de Início"
+                        onChange={handleStartDateChange}
+                      />
                     </div>
                   </div>
                   <div className="form-group">
                     <div className="input-group date">
                       <label htmlFor="finish">Data Final: </label>
-                      <input type="date" placeholder="Data Final" />
+                      <input
+                        type="date"
+                        placeholder="Data Final"
+                        onChange={handleEndDateChange}
+                      />
                     </div>
                   </div>
                   <div className="input-block">
                     <label htmlFor="variavel-label">Variaveis: </label>
-                    <input
-                      type="text"
+                    <select
                       className="variaveis"
-                      placeholder="Variáveis"
-                    />
+                      multiple
+                      onChange={handleVariableChange}
+                      value={selectedVariables}
+                    >
+                      {variables.map((variable) => (
+                        <option key={variable} value={variable}>
+                          {variable}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                   <div className="input-block">
                     <label htmlFor="frequencia-label">Frequencia: </label>

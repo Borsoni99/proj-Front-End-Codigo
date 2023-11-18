@@ -40,13 +40,13 @@ const createCustomClusterIcon = (cluster) => {
 };
 function MAPA() {
   return (
-    <div style={{ height: "70hv", width: "100%", padding: "10wv" }}>
+    <div style={{ padding: "5vw", margin: "15hv" }}>
       <h1>MAPA</h1>
       <div>
         <MapContainer
           center={[-22.9921, -43.3249]}
           zoom={13}
-          style={{ height: "60hv", width: "100%" }}
+          style={{ height: "90vh", width: "100%" }}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
