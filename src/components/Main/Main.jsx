@@ -1,6 +1,29 @@
+import React, { useState } from "react";
+import MAPA from "../../pages/Mapa";
+import Grafic from "../Grafico/Grafico";
+import TableComponent from "../Tabela/Tabela";
 import "./style.css";
 
 const Main = () => {
+  const [selectedFormat, setSelectedFormat] = useState("map"); // Default to 'map'
+
+  const handleFormatChange = (event) => {
+    setSelectedFormat(event.target.value);
+  };
+
+  const renderFormat = () => {
+    switch (selectedFormat) {
+      case "map":
+        return <MAPA />;
+      case "graph":
+        return <Grafic />;
+      case "table":
+        return <TableComponent />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <main>
       <div className="overlap">
@@ -85,11 +108,14 @@ const Main = () => {
                 <div className="buttons">
                   <button className="search-button">Pesquisar</button>
                   <div className="formato-group">
-                    <select className="formato-button">
-                      <option data-display="Formato">Formato</option>
-                      <option value="1">Mapa</option>
-                      <option value="2">Grafico</option>
-                      <option value="3">Tabela</option>
+                    <select
+                      className="formato-button"
+                      value={selectedFormat}
+                      onChange={handleFormatChange}
+                    >
+                      <option value="map">Mapa</option>
+                      <option value="graph">Grafico</option>
+                      <option value="table">Tabela</option>
                     </select>
                   </div>
                   <button className="report-button">Visusalizar Dados</button>
@@ -99,6 +125,7 @@ const Main = () => {
           </div>
         </div>
       </div>
+      {renderFormat()}
     </main>
   );
 };

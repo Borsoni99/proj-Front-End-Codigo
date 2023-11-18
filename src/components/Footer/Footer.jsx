@@ -2,13 +2,15 @@ import "./style.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ padding: "40px" }}>
       <div className="overlap-group">
         <div className="text-1">©2023 Nimbus</div>
         <div className="group">
           <div className="home">Home</div>
-          <div className="about">Sobre nós</div>
           <div className="contact">Contatos</div>
+          <a href="" className="SobreNos">
+            Sobre Nos
+          </a>
         </div>
         <div className="rectangle" />
         <div className="logo-landie">

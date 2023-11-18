@@ -4,12 +4,26 @@ import Footer from "../components/Footer/Footer";
 import Main from "../components/Main/Main";
 
 const Principal = () => {
+  const sectionStyle = {
+    padding: "40px",
+  };
+
+  const footerStyle = {
+    marginTop: "40px",
+  };
+
   return (
-    <div className="Principal">
-      <div className="div">
-        <Header />
-        <Main />
-        <Footer />
+    <div>
+      <div>
+        <div style={sectionStyle}>
+          <Header />
+        </div>
+        <div style={sectionStyle}>
+          <Main />
+        </div>
+        <div style={footerStyle}>
+          <Footer />
+        </div>
       </div>
     </div>
   );

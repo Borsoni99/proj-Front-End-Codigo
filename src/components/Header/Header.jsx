@@ -7,8 +7,10 @@ const Header = () => {
       <div className="nav">
         <div className="menu">
           <div className="Home">Home</div>
-          <div className="Sobre">Sobre Nós</div>
           <div className="Contato">Contatos</div>
+          <a href="" className="SobreNos">
+            Sobre Nos
+          </a>
         </div>
         <div className="logo">
           <img className="logo-header" alt="Logo Nimbus" src={myImage} />

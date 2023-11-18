@@ -9,6 +9,8 @@ import "./index.css";
 //import Listagem from "./pages/Listagem/Listagem";
 //import MAPA from "./pages/Mapa";
 import Principal from "./pages/Principal";
+import GraficoPag from "./pages/GraficoPag";
+import MapaPag from "./pages/Mapa";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
