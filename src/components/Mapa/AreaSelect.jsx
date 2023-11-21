@@ -15,11 +15,10 @@ export default function AreaSelect({ markers }) {
         selectedAreaBounds.contains(marker.geocode)
       );
 
-      console.log("Selected Markers:", selectedMarkers);
+      console.log("Marcadores Selecionados:", selectedMarkers);
     });
 
     const bounds = mapa.getBounds().pad(-0.25);
-
     mapa.selectArea.setValidate((layerPoint) => {
       return bounds.contains(this._mapa.layerPointToLatLng(layerPoint));
     });
